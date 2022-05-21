@@ -1,3 +1,3 @@
 # BountyTools
-Script to install some bug bounty tools.
+
 Maybe it doesn't work that well...
