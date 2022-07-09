@@ -22,7 +22,9 @@ cd ~
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install -v github.com/michenriksen/aquatone@latest
+go install -v github.com/ffuf/ffuf@latest
 
 cp ~/go/bin/aquatone /usr/local/go/bin/
 cp ~/go/bin/naabu /usr/local/go/bin/
 cp ~/go/bin/httpx /usr/local/go/bin/
+cp ~/go/bin/ffuf /usr/local/go/bin/
