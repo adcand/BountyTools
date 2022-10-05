@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# I have to update this thing...
+
 mkdir ~/Bounty
 
 apt install net-tools
