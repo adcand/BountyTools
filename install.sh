@@ -1,32 +1,13 @@
 #!/bin/bash
 
-# I have to update this thing...
+# Remember to run as root and 
+# to add ~/go/bin to path 
 
-mkdir ~/Bounty
-
-apt install net-tools
-apt install screen
-apt install libpcap-dev
-apt install feroxbuster 
-snap install amass
-
-# Install go 
-wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz # Replace with latest version 
-tar -C /usr/local/ -xzf go1.18.2.linux-amd64.tar.gz
-cd /usr/local/
-echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-source ~/.profile
-cd ~
-
-# Install BurpSuite
-# Not today...
+# Libpcap is a dependency to use naabu
+apt install -y libpcap-dev
+apt install -y feroxbuster
 
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-go install -v github.com/michenriksen/aquatone@latest
 go install -v github.com/ffuf/ffuf@latest
-
-cp ~/go/bin/aquatone /usr/local/go/bin/
-cp ~/go/bin/naabu /usr/local/go/bin/
-cp ~/go/bin/httpx /usr/local/go/bin/
-cp ~/go/bin/ffuf /usr/local/go/bin/
+go install -v github.com/lc/gau/v2/cmd/gau@latest
